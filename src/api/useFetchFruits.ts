@@ -27,7 +27,7 @@ const useFetchFruits = () => {
   const { count, page } = router.query as Record<string, string>;
   useEffect(() => {
     apiService
-      .get<FruitsData>(`/fruits?page=${page}&count=${count}`)
+      .get<FruitsData>(`/fruits?page=${page || 1}&count=${count || 10}`)
       .then(({ data }) => {
         setFruitsData(data);
         setLoading(false);

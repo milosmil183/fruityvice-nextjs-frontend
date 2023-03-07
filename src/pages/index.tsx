@@ -1,9 +1,7 @@
 import Head from "next/head";
 import HomePage from "@/components/HomePage";
-import { useRouter } from "next/router";
 
 export default function Home() {
-  const router = useRouter();
   return (
     <>
       <Head>
@@ -12,7 +10,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {router.isReady && <HomePage />}
+      <HomePage />
     </>
   );
 }
