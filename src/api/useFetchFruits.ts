@@ -2,7 +2,7 @@ import useApiService from "@/api/useApiService";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-type Fruit = {
+export type Fruit = {
   id: number;
   name: string;
   family: string;
